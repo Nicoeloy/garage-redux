@@ -26,7 +26,7 @@ const initialState = {
 
 const reducers = combineReducers({
   // key: reducer
-  // garage: (state = null, action) => state,
+  garage: (state = null, action) => state,
   cars: carsReducer
 });
 
