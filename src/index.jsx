@@ -7,11 +7,13 @@ import logger from 'redux-logger';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createHistory as history } from 'history';
 
+import CarsIndex from './containers/cars_index';
 import '../assets/stylesheets/application.scss';
 
-import carsReducer from './reducers/cars_reducer'
+import carsReducer from './reducers/cars_reducer';
 
-const garageName = prompt("what's your garage ?") || `garage${Math.floor(10 + (Math.random() * 90))}`;
+// prompt("what's your garage ?") ||
+const garageName = `garage${Math.floor(10 + (Math.random() * 90))}`;
 const initialState = {
   garage: garageName,
   cars: [
@@ -24,7 +26,7 @@ const initialState = {
 
 const reducers = combineReducers({
   // key: reducer
-  garage: (state = null, action) => state,
+  // garage: (state = null, action) => state,
   cars: carsReducer
 });
 

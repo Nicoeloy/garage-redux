@@ -20,7 +20,7 @@ class CarsIndex extends Component {
         {this.props.cars.map((car) => {
           return (
             <div key={car.id} className="car-smallad">
-              <img className="car-logo" src="assets/images/logo_square.svg" />
+              <img className="car-logo" src="assets/images/logo_square.svg" alt="car-logo" />
               <div className="car-details">
                 <span>{car.brand} - {car.model}</span>
                 <ul>
