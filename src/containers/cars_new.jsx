@@ -18,8 +18,8 @@ class CarsNew extends Component {
       <Aside key="aside" garage={this.props.garage}>
         <Link to="/">Back to list</Link>
       </Aside>,
-      <div key="add" className="form-container" style={{ backgroundImage: "url('/assets/images/form.jpg')"}}>
-        <div className="overlay"></div>
+      <div key="add" className="form-container" style={{ backgroundImage: "url('/assets/images/form.jpg')" }}>
+        <div className="overlay" />
         <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
           <div className="form-group">
             <label htmlFor="InputBrand">Brand</label>
@@ -42,7 +42,7 @@ class CarsNew extends Component {
       </div>
     ];
   }
-};
+}
 
 function mapStateToProps(state) {
   return {
