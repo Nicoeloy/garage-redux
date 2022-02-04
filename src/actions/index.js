@@ -14,17 +14,17 @@ export function fetchCars(garage) {
   };
 }
 
-export function addCar(garage, brand, model, owner, plate) {
+export function addCar(garage, car, callback) {
   const url = `${BASE_URL}/${garage}/cars`;
-  const body = { brand, model, owner, plate }; // ES6 destructuring
   const request = fetch(url, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(body)
-  }).then(r => r.json());
+    body: JSON.stringify(car)
+  }).then(r => r.json())
+    .then(() => callback());
 
   return {
     type: ADD_CAR,
